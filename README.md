@@ -1,6 +1,8 @@
 # Identity Management Microservice
 
-This repository contains a microservice that emulates a customer's homegrown identity management system (IDMS). I initially designed and implemented this microservice to demo bidirectional synchronizations of identities between Salesforce and the customer's homegrown IDMS (e.g., new and updated identities in either system automatically synching to the other). Recently, I started using this microservice to demo universal API management (UAPIM) on the MuleSoft Anypoint Platform.
+This repository contains a microservice that emulates a customer’s homegrown identity management system (IDMS). I initially designed and implemented this microservice to demo bidirectional synchronization of identities between Salesforce and the customer’s IDMS. I later used it as a standalone REST API to demo Universal API Management (UAPIM) with MuleSoft Anypoint Platform.
+
+The microservice uses an embedded H2 database with seed data, allowing it to run as a self-contained demo without an external database.
 
 ## Table of Contents
 1. [Implementation Overview](#implementation-overview)
@@ -8,7 +10,7 @@ This repository contains a microservice that emulates a customer's homegrown ide
 3. [Reporting Issues](#reporting-issues)
 
 ## Implementation Overview
-I designed and implemented the Identity Management microservice using a bottom-up or code-first approach. I leveraged the [springdoc-openapi java library](https://springdoc.org) to automate the generation of its API specification via annotation in my code. 
+I designed and implemented the Identity Management microservice using a bottom-up or code-first approach. I leveraged the [springdoc-openapi java library](https://springdoc.org) to automate the generation of its API specification via annotation in the code. 
 
 > [!NOTE]
 > As the name implies, the folder `specification` includes a copy of the generated API specification for convenience - e.g., I use it to demo how to publish a specification to [Anypoint Exchange](https://anypoint.mulesoft.com/exchange/) using the [API Catalog CLI](https://docs.mulesoft.com/exchange/apicat-about-api-catalog-cli).
